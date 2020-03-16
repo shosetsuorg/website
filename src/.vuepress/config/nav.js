@@ -13,8 +13,12 @@ module.exports = [
 				text: "Guides",
 				items: [
 					{
-						text: "Getting Started",
+						text: "Getting started",
 						link: "/help/guides/getting-started/"
+					},
+					{
+						text: "Creating extensions",
+						link: "/help/guides/creating-extensions/"
 					}
 				]
 			}
