@@ -3,7 +3,7 @@ title: Creating Extensions
 lang: en-US
 ---
 
-# Getting started
+# Creating Extensions
 Shosetsu uses Lua extensions and an API on which the whole app is modeled. [Lua](https://www.lua.org/about.html) is a simple interperated language. We recommend skimming through [Programming in Lua](https://www.lua.org/pil/contents.html) and/or the [reference manual](https://www.lua.org/manual/5.1/) before trying to start writing extensions.
 
 
