@@ -12,11 +12,18 @@ module.exports = [
 			{
 				text: "Guides",
 				items: [
-					{ text: "Getting Started", link: "/help/guides/getting-started/" }
+					{
+						text: "Getting Started",
+						link: "/help/guides/getting-started/"
+					}
 				]
 			}
 		]
 	},
 	{ text: "Discord", link: "https://discord.gg/ttSX7gB" },
-	{ text: "F-Droid", link: "https://f-droid.org/packages/com.github.doomsdayrs.apps.shosetsu/" }
+	{
+		text: "F-Droid",
+		link:
+			"https://f-droid.org/packages/com.github.doomsdayrs.apps.shosetsu/"
+	}
 ];
