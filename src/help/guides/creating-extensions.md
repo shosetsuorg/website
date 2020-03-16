@@ -4,71 +4,88 @@ lang: en-US
 ---
 
 # Getting started
-Shosetsu use's Lua extensions, And an API that the app is modeled off using. It is a simple interperated language that anyone can get used too!
+Shosetsu uses Lua extensions and an API on which the whole app is modeled. [Lua](https://www.lua.org/) is a simple interperated language. We recommend skimming through [Programming in Lua](https://www.lua.org/pil/contents.html) and/or the [reference manual](https://www.lua.org/manual/5.1/) before trying to start writing extensions.
+
 
 ## Requriments
-* InteliJ is highly suggested, but another IDE is acceptable. This is currently just InteliJ setup
+* Any text editor. An IDE is recommended and IntelliJ IDEA is highly suggested.
 * Basic programming knowledge.
-* An internet connection
+* An internet connection.
+
 
 ## Setup
-1. [Fork](https://github.com/ShosetsuOrg/extensions/fork) the extensions repo
-2. Clone the repository to your computer with ```git clone https://github.com/username/extensions.git```
-3. (Optional) [Fork](https://github.com/ShosetsuOrg/kotlin-lib) the extension-lib, and clone it ```git clone https://github.com/username/kotlin-lib.git```
+1. [Fork](https://github.com/ShosetsuOrg/extensions/fork) the extensions repository.
+2. Clone the repository to your computer with `git clone https://github.com/username/extensions.git`
+3. (Optional) [Fork](https://github.com/ShosetsuOrg/kotlin-lib) the extension library, and/or clone it.
 
-### InteliJ
-This requires a bit of understanding of how InteliJ works. Make sure 
-1. `Settings > Plugins > Marketplace` to open plugin repo
-2. Install `EmmyLua` and `Kotlin` then restart
-3. `File > Open` and open the directory of the extension repo. This will load it up
-4. `File > New > Module from Existing Sources` and open the directory of the extension-lib. Now you have two modules, one of the extensions and one of the library
-5. `Edit Configurations`
-6. Press the `+` button, select `Kotlin`
-7. Name it the new configuration as `Test` or what you want.
-8. Set Main Class to `Test` in `com.github.doomsdayrs.api.shosetsu.core` 
-9. Set the working directory to the directory of your cloned repository
-10. Click `Apply` then `Ok`
-11. In the lib, Select Test and open. There is an array at the top labeled SOURCES and other configs you can use. 
-12. The style is `lang/Name` Later you can change this to the extension you wish to use/make
-13. HIGHLY Suggested to change from `4 spaces` to using the tab character + smart tabs
-14. Congrats, You have successfully setup InteliJ to run Shosetsu Extensions
-
-## Lua Extensions and Understanding.
-Shosetu's extensions are written in a multiplatform embed language called Lua. 
-Lua is a lightweight, high-level, multi-paradigm programming language designed primarily for embedded use in applications. ~ Wiki
-Because it is not compiled, the actual content of the file has to match the requirments of the library. 
-Each Lua Extension is to scrape an individual site
-
-### ABSOLUTE Requirments
-1. INT		`id`			: 	This is to distinguish it from other extensions in code.
-2. STRING 	`name`			: 	This is the name of the extension. It MUST match the file name.
-3. ARRAY 	`listings` 		: 	These are the 'pages' that the site provides that list their novels. Hard to understand, but most sites only have one 
-4. FUNCTION `getPassage`	: 	```(String) -> String``` 			Used to get a chapter's content
-5. FUNCTION `parseNovel`	: 	```(String) -> Novel.Info``` 		Used to get the information of a novel
-6. FUNCTION `search`		: 	```(INT,MAP)-> Novel.Listing```		Used to get search results
-7. FUNCTION `updateSetting`	:	```(INT,ANY)```						Used to update settings of the LuaScript
-8. JSON		`HEADER`		:	This is the header to all files, must be on the VERY first line. It includes information for Shosetsu to understand what this extension is  
-9. STRING	`baseURL`		:	Base URL of the site
-
-### Optional Requirments
-1. STRING	`imageURL`		: Image of the website; Default Empty
-2. BOOLEAN	`hasCloudFlare` : Set to TRUE if the site is protected; Default FALSE
-3. BOOLEAN 	`hasSearch`		: Set to FALSE if the site does not have a search function; Default TRUE
-4. ARRAY	`filters`		: Used to create second drawer, values returned in search & getListing; Default Empty
-5. ARRAY	`settings`		: Settings to be applied by user; Default Empty
-
-#### Writing your extension
-Now that you understand some basics of what comes in and out, time to get to more advanced details and creation!
-
-1. First, Copy `DefaultStructure` to `src/LANG`. The LANG being which language you are writing for
-2. Rename the file to the site's name
-3. Set the baseURL to the site's URL
-4. Remove optional's that you don't need to change from default. Helps with file size
-5. Create the functions, then run the test build on it. 
-6. STUD: Will complete later
+### IntelliJ IDEA
+This requires an understanding of how IDEA works.
+1. Install the `EmmyLua` and `Kotlin` plguins (`Settings > Plugins > Marketplace`) and restart IDEA.
+2. `File > Open` the directory of the extensions repo.
+3. If you cloned the extension library, `File > New > Module from Existing Sources` and open the extension-lib directory.
+4. `Edit Configurations`
+5. Press the `+` button, select `Kotlin` and name the new configuration `Test`.
+6. Set Main Class to `Test` in `com.github.doomsdayrs.api.shosetsu.extensions`, or `com.github.doomsdayrs.api.shosetsu.extensions.core` if you cloned the extension library.
+7. Set the working directory to the directory of your cloned repository
+8. In the lib, Select Test and open.
+9. Change configuration according to your needs.
+10. Run
 
 
+## Understanding Lua Extensions and Libraries
+Each Lua Extension has the responsability for an individual site, but sites often use available software, which means they share the same codebase.
+This is why extensions sometimes do not have any code but a call to `Require`.
+A good example is the plethora of extensions based on the Madara library, which defer all logic to the Madara library.
+
+### Extension Stucture
+A Commented JSON Header is included at the start of the file:
+```
+-- {"id":9001,"version":"1.0.0","author":"TechnoJo4"}
+```
+
+An extension returns a table, the following fields are required:
+
+| Name              | Type                            | Description
+| ----------------- | ------------------------------- | -----------
+| `id`              | `int`                           | Unique identifier to distinguish extensions
+| `name`            | `string`                        | Name of the extension
+| `baseURL`         | `string`                        | Base URL, usually a domain name prefixed with `https?://`
+| `listings`        | `Listing[]`                     | The "pages" that the site provides that list novels. Sites usually only have a single one.
+| `getPassage`      | `fun(string): string`           | Gets a chapter's content
+| `parseNovel`      | `fun(string): NovelInfo`        | Gets a novel's info
+| `search`          | `fun(table<int, any>): Novel[]` | Used to search for novels
+| `updateSetting`   | `fun(int, any): void`           | Used to update settings
+
+The most important parts are listings, parseNovel and getPassage, but to write any of these you need to know how the create instances of the required types:
+
+The `Listing` type:
+```
+Listing(
+    name: string,
+    isIncrementing: boolean,
+    filters: Filter[]?,
+    getListing: fun(data: table<int, any>?, inc: int?): Novel[]
+)
+```
+
+TODO: EXPLAIN AND ADD OTHER TYPES
+
+### Optionals
+The following fields are optional:
+
+| Name            | Type       | Description      | Default
+| --------------- | ---------- | ---------------- | -------
+| `imageURL`      | `string`   | Logo of website  | `""`
+| `filters`       | `Filter[]` | Search filters   | `{}`
+| `settings`      | `Filter[]` | Global filters   | `{}`
+| `hasSearch`     | `boolean`  | Self-explanatory | `false`
+| `hasCloudFlare` | `boolean`  | Self-explanatory | `false`
 
 
-
-
+## Writing your extension
+Now that you understand the basics, you can get to writing your extension:
+1. Copy `DefaultStructure.lua` to `src/LANG/NAME.lua`. LANG being the language of the website.
+2. Fill in required fields.
+3. Remove optionals that you do not need.
+4. Create functions according to specification, then run the test loop on your extension.
+6. TODO: COMPLETE
