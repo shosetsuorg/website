@@ -15,7 +15,7 @@ module.exports = {
 			},
 			{
 				title: "Guides",
-				children: ["/help/guides/getting-started"]
+				children: ["/help/guides/getting-started", "/help/guides/creating-extensions"]
 			}
 		],
 		repo: "shosetsuorg/android-app",

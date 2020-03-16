@@ -4,32 +4,36 @@ lang: en-US
 ---
 
 # Getting started
-Shosetsu uses Lua extensions and an API on which the whole app is modeled. [Lua](https://www.lua.org/) is a simple interperated language. We recommend skimming through [Programming in Lua](https://www.lua.org/pil/contents.html) and/or the [reference manual](https://www.lua.org/manual/5.1/) before trying to start writing extensions.
+Shosetsu uses Lua extensions and an API on which the whole app is modeled. [Lua](https://www.lua.org/about.html) is a simple interperated language. We recommend skimming through [Programming in Lua](https://www.lua.org/pil/contents.html) and/or the [reference manual](https://www.lua.org/manual/5.1/) before trying to start writing extensions.
 
 
-## Requriments
-* Any text editor. An IDE is recommended and IntelliJ IDEA is highly suggested.
-* Basic programming knowledge.
+## Requirements
 * An internet connection.
+* Basic programming knowledge.
+* Any text editor. An IDE is recommended, IntelliJ IDEA is highly suggested as this guide assumes you are using IDEA.
 
 
 ## Setup
-1. [Fork](https://github.com/ShosetsuOrg/extensions/fork) the extensions repository.
-2. Clone the repository to your computer with `git clone https://github.com/username/extensions.git`
-3. (Optional) [Fork](https://github.com/ShosetsuOrg/kotlin-lib) the extension library, and/or clone it.
+1. Fork the [extensions](https://github.com/ShosetsuOrg/extensions/fork) repo and then clone it.
+    ```bash
+    git clone https://github.com/username/extensions.git
+    ```
+1. **OPTIONAL:** Fork the [kotlin-lib](https://github.com/ShosetsuOrg/kotlin-lib) repo and then clone it.
+    ```bash
+    git clone https://github.com/username/kotlin-lib.git
+    ```
 
 ### IntelliJ IDEA
-This requires an understanding of how IDEA works.
-1. Install the `EmmyLua` and `Kotlin` plguins (`Settings > Plugins > Marketplace`) and restart IDEA.
-2. `File > Open` the directory of the extensions repo.
-3. If you cloned the extension library, `File > New > Module from Existing Sources` and open the extension-lib directory.
-4. `Edit Configurations`
-5. Press the `+` button, select `Kotlin` and name the new configuration `Test`.
-6. Set Main Class to `Test` in `com.github.doomsdayrs.api.shosetsu.extensions`, or `com.github.doomsdayrs.api.shosetsu.extensions.core` if you cloned the extension library.
-7. Set the working directory to the directory of your cloned repository
-8. In the lib, Select Test and open.
-9. Change configuration according to your needs.
-10. Run
+1. Install the **`EmmyLua`** and **`Kotlin`** plugins (**`Settings > Plugins > Marketplace`**) and restart IDEA.
+1. **`File > Open`** the directory of the extensions repo.
+1. If you cloned **kotlin-lib**, **`File > New > Module from Existing Sources`** and open the extension-lib directory.
+1. **`Edit Configurations`**
+1. Press the **`+`** button, select **`Kotlin`** and name the new configuration **`Test`**.
+1. Set Main Class to **`Test`** in **`com.github.doomsdayrs.api.shosetsu.extensions`**, or **`com.github.doomsdayrs.api.shosetsu.extensions.core`** if you cloned the extension library.
+1. Set the working directory to the directory of your cloned repository
+1. In the lib, Select Test and open.
+1. Change configuration according to your needs.
+1. Run
 
 
 ## Understanding Lua Extensions and Libraries
