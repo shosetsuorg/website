@@ -31,6 +31,6 @@ jobs:
           deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
           publish_branch: gh-pages
           publish_dir: ./public
-          username: 'github-actions[bot]'
-          useremail: 'github-actions[bot]@users.noreply.github.com'
-          commitMessage: ${{ github.event.head_commit.message }}
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: ${{ github.event.head_commit.message }}
