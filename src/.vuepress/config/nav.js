@@ -19,6 +19,10 @@ module.exports = [
 					{
 						text: "Creating extensions",
 						link: "/help/guides/creating-extensions/"
+					},
+					{
+						text: "Repositories",
+						link: "/help/guides/repositories/"
 					}
 				]
 			}
@@ -27,7 +31,6 @@ module.exports = [
 	{ text: "Discord", link: "https://discord.gg/ttSX7gB" },
 	{
 		text: "F-Droid",
-		link:
-			"https://f-droid.org/packages/com.github.doomsdayrs.apps.shosetsu/"
+		link: "https://f-droid.org/packages/com.github.doomsdayrs.apps.shosetsu/"
 	}
 ];
