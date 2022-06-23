@@ -28,5 +28,6 @@ module.exports = [
 			}
 		]
 	},
+	{ text: "Matrix", link: "https://matrix.to/#/#shosetsu:matrix.org" },
 	{ text: "Discord", link: "https://discord.gg/ttSX7gB" }
 ];
