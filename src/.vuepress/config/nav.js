@@ -28,9 +28,6 @@ module.exports = [
 			}
 		]
 	},
-	{ text: "Discord", link: "https://discord.gg/ttSX7gB" },
-	{
-		text: "F-Droid",
-		link: "https://f-droid.org/packages/com.github.doomsdayrs.apps.shosetsu/"
-	}
+	{ text: "Matrix", link: "https://matrix.to/#/#shosetsu:matrix.org" },
+	{ text: "Discord", link: "https://discord.gg/ttSX7gB" }
 ];

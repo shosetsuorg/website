@@ -1,3 +1,3 @@
-# ![logo](https://github.com/Doomsdayrs/shosetsu/raw/master/app/src/main/res/mipmap-hdpi/ic_launcher.png) Shosetsu Website
+# ![logo](https://github.com/shosetsuorg/shosetsu/blob/development/android/src/main/res/mipmap-hdpi/ic_launcher.png) Shosetsu Website
 
-Grab the latest version of Shosetsu from [here](https://github.com/ShosetsuOrg/android-app/releases).
+Grab the latest version of Shosetsu from [here](https://github.com/ShosetsuOrg/shosetsu-preview/releases/latest).
