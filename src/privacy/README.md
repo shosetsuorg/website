@@ -18,3 +18,13 @@ Data collected from crash reports contain the following:
 
 Said crash data is maintained on a report server, deleted periodically.
 No data is used for profit, nor shared with anyone except core developers.
+
+## Data deletion
+
+To request your data to be deleted, 
+please provide the ACRA identifier for your app, 
+accessible via More>About.
+
+Afterwards, contact the developer via any of the following: (Excuse phonetic writing, it is to prevent bots
+- "doomsdayrs at gmail dot com"
+- "at doomsdayrs colon matrix dot org"
