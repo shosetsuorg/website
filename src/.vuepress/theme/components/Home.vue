@@ -75,6 +75,7 @@
 import NavLink from "@theme/components/NavLink.vue";
 
 import axios from "axios";
+const GITHUB_STABLE_API = "https://gitlab.com/api/v4/projects/39099987/releases";
 
 export default {
 	name: "Home",
