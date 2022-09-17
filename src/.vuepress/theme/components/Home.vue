@@ -76,9 +76,6 @@ import NavLink from "@theme/components/NavLink.vue";
 
 import axios from "axios";
 
-const RELEASE_URL =
-	"https://api.github.com/repos/shosetsuorg/shosetsu-preview/releases/latest";
-
 export default {
 	name: "Home",
 
@@ -105,13 +102,13 @@ export default {
 	},
 
 	async mounted() {
-		const { data } = await axios.get(RELEASE_URL);
+		const { data } = await axios.get(GITHUB_STABLE_API);
 
 		// A release may eventually have more than just the apk in assets
-		const apkAsset = data.assets.find(a => a.name.includes(".apk"));
+		const apkAsset = data[0].assets.links.find(a => a.name.includes(".apk"));
 
-		this.$data.tagName = data.tag_name;
-		this.$data.browserDownloadUrl = apkAsset.browser_download_url;
+		this.$data.tagName = data[0].tag_name;
+		this.$data.browserDownloadUrl = apkAsset.url;
 	}
 };
 </script>
