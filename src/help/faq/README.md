@@ -52,9 +52,15 @@ Use the source which has the best version of the content you seek.
 
 Try them all out and do a global search, or use google. Please.
 
-### Q: Can't update from 1136 to 1440
+### Q: How to move from v1.x preview to v2.x.x stable?
 
-Install 1435 and open then install 1440
+- Install the v2.x.x release, it will install as a seperate app.
+- Go to More → Backups and create a backup.
+- Export this backup to an external location you can access easily.
+- Open the v2.x.x release and again by going to More → Backups choose the option to restore the backup you just created.
+- You should have your library back in the v2.x.x release.
+
+Note: You will have to redownload any chapters you downloaded in the v1.x release.
 
 ### Q: Next release date?
 
