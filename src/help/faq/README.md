@@ -19,7 +19,7 @@ We haven't worked on them in awhile, If you know Lua feel free to contribute.
 
 ### Issue with stable release v1.1.4
 
-Please use the [preview version](https://github.com/shosetsuorg/shosetsu-preview/releases/latest)
+Please use the [v2.x.x stable release](https://gitlab.com/shosetsuorg/shosetsu/-/releases/permalink/latest)
 
 ### Why does Sysosetsu (extension) not have images?
 
