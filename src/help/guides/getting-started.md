@@ -7,9 +7,9 @@ lang: en-US
 
 ## Installation
 
-You can download the latest version of **Shosetsu** by clicking either of the above buttons or by going to the [GitHub releases](https://github.com/shosetsuorg/shosetsu-preview/releases/latest) page.
+You can download the latest version of **Shosetsu** by clicking either of the above buttons or by going to the [GitHub releases](https://gitlab.com/shosetsuorg/shosetsu/-/releases/permalink/latest) page.
 
-When you've completed the download, click the **`shosetsu-r####.apk`** file and proceed with installing it.
+When you've completed the download, click the **`shosetsu-v#.##.##.apk`** file and proceed with installing it.
 
 ## Opening the application
 
@@ -25,7 +25,7 @@ on the bottom you will see four buttons. "Library", "Updates", "Browse", "More".
 We will focus on "Browse" and "Library" for now, head over to the "Browse" view by clicking the icon.
 
 In this view, you should see numerous choices, and a download icon on the right of them.
-- If you downloaded via google play, please add a repository following instructions in [Adding Repositories](help/guides/repositories#adding), 
+- If you downloaded via google play, please add a repository following instructions in [Adding Repositories](/help/guides/repositories#adding), 
   suggestion being the [official repository](https://github.com/shosetsuorg/extensions/)
 - If you do not see the list, please click "Refresh". Ensure your internet is working
 
