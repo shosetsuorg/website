@@ -23,11 +23,14 @@ module.exports = [
 					{
 						text: "Repositories",
 						link: "/help/guides/repositories/"
+					},
+					{
+						text: "Browse",
+						link: "/help/guides/browse/"
 					}
 				]
 			}
 		]
 	},
-	{ text: "Matrix", link: "https://matrix.to/#/#shosetsu:matrix.org" },
-	{ text: "Discord", link: "https://discord.gg/ttSX7gB" }
+	{ text: "Come chat!", link: "https://matrix.to/#/#shosetsu:matrix.org" }
 ];

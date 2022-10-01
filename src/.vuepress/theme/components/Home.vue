@@ -31,7 +31,7 @@
 	  	<a
 		  class="action-button action-download"
 		  rel="noopener noreferrer"
-		  :href="browserDownloadUrl || 'https://github.com/shosetsuorg/android-app/releases/latest'"
+		  :href="browserDownloadUrl || 'https://gitlab.com/shosetsuorg/shosetsu/-/releases/permalink/latest'"
 		  title="Download latest release"
 		  :download="browserDownloadUrl ? '' : null"
 		>

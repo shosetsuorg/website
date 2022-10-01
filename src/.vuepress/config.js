@@ -23,7 +23,7 @@ module.exports = {
 				]
 			}
 		],
-		repo: "shosetsuorg/android-app",
+		repo: "shosetsuorg/shosetsu",
 		docsRepo: "shosetsuorg/website",
 		docsDir: "src",
 		logo: "/assets/media/logo.svg",
