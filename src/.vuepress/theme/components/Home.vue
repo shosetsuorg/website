@@ -1,81 +1,69 @@
 <template>
-  <main
-    class="home"
-    aria-labelledby="main-title"
-  >
-    <header class="hero">
-      <img
-        v-if="data.heroImage"
-        :src="$withBase(data.heroImage)"
-        :alt="data.heroAlt || 'hero'"
-      >
+	<main class="home" aria-labelledby="main-title">
+		<header class="hero">
+			<img
+				v-if="data.heroImage"
+				:src="$withBase(data.heroImage)"
+				:alt="data.heroAlt || 'hero'"
+			/>
 
-      <h1
-        v-if="data.heroText !== null"
-        id="main-title"
-      >
-        {{ data.heroText || $title || 'Shosetsu' }}
-      </h1>
+			<h1 v-if="data.heroText !== null" id="main-title">
+				{{ data.heroText || $title || "Shosetsu" }}
+			</h1>
 
-      <p
-        v-if="data.tagline !== null"
-        class="description"
-      >
-        {{ data.tagline || $description || 'Free and open source novel reader for Android.' }}
-      </p>
+			<p v-if="data.tagline !== null" class="description">
+				{{
+					data.tagline ||
+					$description ||
+					"Free and open source novel reader for Android."
+				}}
+			</p>
 
-      <p
-        v-if="data.actionText && data.actionLink"
-        class="action"
-      >
-	  	<a
-		  class="action-button action-download"
-		  rel="noopener noreferrer"
-		  :href="browserDownloadUrl || 'https://gitlab.com/shosetsuorg/shosetsu/-/releases/permalink/latest'"
-		  title="Download latest release"
-		  :download="browserDownloadUrl ? '' : null"
-		>
-		  <span>
-		    Download
-		  </span>
-		</a>
-        <NavLink
-          class="action-button action-get-started"
-          :item="actionLink"
-        />
-      </p>
-    </header>
+			<p v-if="data.actionText && data.actionLink" class="action">
+				<a
+					class="action-button action-download"
+					rel="noopener noreferrer"
+					:href="
+						browserDownloadUrl ||
+						'https://gitlab.com/shosetsuorg/shosetsu/-/releases/permalink/latest'
+					"
+					title="Download latest release"
+					:download="browserDownloadUrl ? '' : null"
+				>
+					<span> Download </span>
+				</a>
+				<NavLink
+					class="action-button action-get-started"
+					:item="actionLink"
+				/>
+			</p>
+		</header>
 
-    <div
-      v-if="data.features && data.features.length"
-      class="features"
-    >
-      <div
-        v-for="(feature, index) in data.features"
-        :key="index"
-        class="feature"
-      >
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.details }}</p>
-      </div>
-    </div>
+		<div v-if="data.features && data.features.length" class="features">
+			<div
+				v-for="(feature, index) in data.features"
+				:key="index"
+				class="feature"
+			>
+				<h2>{{ feature.title }}</h2>
+				<p>{{ feature.details }}</p>
+			</div>
+		</div>
 
-    <Content class="theme-default-content custom" />
+		<Content class="theme-default-content custom" />
 
-    <div
-      v-if="data.footer"
-      class="footer"
-    >
-      {{ data.footer }}
-    </div>
-  </main>
+		<div v-if="data.footer" class="footer">
+			{{ data.footer }}
+		</div>
+	</main>
 </template>
 
 <script>
 import NavLink from "@theme/components/NavLink.vue";
 
 import axios from "axios";
-const GITHUB_STABLE_API = "https://gitlab.com/api/v4/projects/39099987/releases";
+const GITHUB_STABLE_API =
+	"https://gitlab.com/api/v4/projects/39099987/releases";
 
 export default {
 	name: "Home",
@@ -85,7 +73,7 @@ export default {
 	data() {
 		return {
 			tagName: "",
-			browserDownloadUrl: ""
+			browserDownloadUrl: "",
 		};
 	},
 
@@ -97,20 +85,22 @@ export default {
 		actionLink() {
 			return {
 				link: this.data.actionLink,
-				text: this.data.actionText
+				text: this.data.actionText,
 			};
-		}
+		},
 	},
 
 	async mounted() {
 		const { data } = await axios.get(GITHUB_STABLE_API);
 
 		// A release may eventually have more than just the apk in assets
-		const apkAsset = data[0].assets.links.find(a => a.name.includes(".apk"));
+		const apkAsset = data[0].assets.links.find((a) =>
+			a.name.includes(".apk")
+		);
 
 		this.$data.tagName = data[0].tag_name;
 		this.$data.browserDownloadUrl = apkAsset.url;
-	}
+	},
 };
 </script>
 
