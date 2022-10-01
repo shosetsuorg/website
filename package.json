@@ -18,11 +18,10 @@
 				"eslint-config-vuepress": "^2.2.0",
 				"eslint-plugin-prettier": "^3.4.1",
 				"prettier": "^2.2.1",
-				"vuepress": "^1.7.1",
+				"vuepress": "^0.14.11",
 				"vuepress-plugin-clean-urls": "^1.1.2",
-				"vuepress-plugin-container": "^2.1.5",
-				"vuepress-theme-hope": "0.1.0-beta.34",
-				"vuepress-types": "^0.9.4"
-		},
-		"dependencies": {}
+				"vuepress-plugin-container": "^2.1.4",
+				"vuepress-theme-hope": "^0.1.0",
+				"vuepress-types": "^0.8.1"
+		}
 }
