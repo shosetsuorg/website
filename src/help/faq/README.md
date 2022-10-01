@@ -5,33 +5,23 @@ lang: en-US
 
 # Frequently Asked Questions
 
-### How can i request a new source
+## App
 
-Make sure there isn't another for the same one at the extensions repo. Otherwise, https://github.com/shosetsuorg/extensions/issues/new/choose (Source Request)
+### Q: How to move from v1.x preview to v2.x.x stable?
 
-### Where do extensions come from?
+- Install the v2.x.x release, it will install as a seperate app.
+- Go to More → Backups and create a backup.
+- Export this backup to an external location you can access easily.
+- Open the v2.x.x release and again by going to More → Backups choose the option to restore the backup you just created.
+- You should have your library back in the v2.x.x release.
 
-https://github.com/shosetsuorg/extensions
-
-### Whats with some extensions not working
-
-We haven't worked on them in awhile, If you know Lua feel free to contribute.
+Note: You will have to redownload any chapters you downloaded in the v1.x release.
 
 ### Issue with stable release v1.1.4
 
 Please use the [v2.x.x stable release](https://gitlab.com/shosetsuorg/shosetsu/-/releases/permalink/latest)
 
-### Why does Sysosetsu (extension) not have images?
-
-The website does not have images
-
-### Why does MTL (extension) not search?
-
-No search for MTL.
-
-### Why does ReadLightNovel have so many issues?
-
-Shitty website
+## Extensions
 
 ### What is the best extension for shosetsu?
 
@@ -48,19 +38,34 @@ The whole point of Shosetsu is the versatility of being able to use as many diff
 and even choose the extensions from third-party repositories if you need to. 
 Use the source which has the best version of the content you seek. 
 
+### How can i request a new extension
+
+Go to the extensions [github](https://github.com/shosetsuorg/extensions/issues) 
+Make sure there isn't another for the same one at the extensions repo. Otherwise make a new [issue](https://github.com/shosetsuorg/extensions/issues/new/choose)(Source Request)
+
+### Where do extensions come from?
+
+https://github.com/shosetsuorg/extensions
+
+### Whats with some extensions not working
+
+We haven't worked on them in awhile, If you know Lua feel free to contribute.
+
+### Why does Sysosetsu (extension) not have images?
+
+The website does not have images
+
+### Why does MTL (extension) not search?
+
+No search for MTL.
+
+### Why does ReadLightNovel have so many issues?
+
+Shitty website
+
 ### Best Extension/Source for "[novel title]"?
 
 Try them all out and do a global search, or use google. Please.
-
-### Q: How to move from v1.x preview to v2.x.x stable?
-
-- Install the v2.x.x release, it will install as a seperate app.
-- Go to More → Backups and create a backup.
-- Export this backup to an external location you can access easily.
-- Open the v2.x.x release and again by going to More → Backups choose the option to restore the backup you just created.
-- You should have your library back in the v2.x.x release.
-
-Note: You will have to redownload any chapters you downloaded in the v1.x release.
 
 ### Q: Next release date?
 
@@ -98,6 +103,3 @@ Ensuring no other file exists with the same name.
 ```bash
 cat decompressed-backup.sbk.json | gzip | base64 > restored-backup.sbk
 ```
-
-## Work in Progress
-You can help fill this in by pressing the **`Help us improve this page`** link.
