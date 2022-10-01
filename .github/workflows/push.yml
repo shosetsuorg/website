@@ -12,10 +12,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Install Node v12
-        uses: actions/setup-node@v1
+      - name: Install Node v16
+        uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 16
 
       - name: Build website
         run: |
