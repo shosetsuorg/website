@@ -23,7 +23,7 @@ module.exports = {
 				]
 			}
 		],
-		repo: "shosetsuorg/shosetsu",
+		repo: "https://gitlab.com/shosetsuorg/shosetsu",
 		docsRepo: "shosetsuorg/website",
 		docsDir: "src",
 		logo: "/assets/media/logo.svg",
