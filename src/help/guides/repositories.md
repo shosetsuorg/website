@@ -12,7 +12,7 @@ These are a list of known shosetsu repositories.
 
 | Author	| URL												| Notable Sources			|
 |-----------|---------------------------------------------------|---------------------------|
-| jobobby04 | https://github.com/jobobby04/ShosetsuExtensions 	| ArchiveOfOurOwn, ReadWN 	|
+| jobobby04 | `https://github.com/jobobby04/ShosetsuExtensions` | ArchiveOfOurOwn, ReadWN 	|
 
 
 ## Add & Remove Repositories
