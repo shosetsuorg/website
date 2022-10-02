@@ -17,7 +17,7 @@ lang: en-US
 
 Note: You will have to redownload any chapters you downloaded in the v1.x release.
 
-### Issue with stable release v1.1.4
+### Issue with v1.#.# / preview r####
 
 Please use the [v2.x.x stable release](https://gitlab.com/shosetsuorg/shosetsu/-/releases/permalink/latest)
 
