@@ -10,10 +10,10 @@ Shosetsu has repositories that provide extensions and libraries for its core fun
 
 These are a list of known shosetsu repositories.
 
-| Author		| URL												| Notable Sources			|
-|---------------|---------------------------------------------------|---------------------------|
-| ShosetsuOrg	| `https://repo.shosetsu.app/universe`				| Mirror of git				|
-| jobobby04 	| `https://github.com/jobobby04/ShosetsuExtensions` | ArchiveOfOurOwn, ReadWN 	|
+| Author		| URL																		| Notable Sources			|
+|---------------|---------------------------------------------------------------------------|---------------------------|
+| ShosetsuOrg	| `https://repo.shosetsu.app/universe`										| Mirror of git				|
+| jobobby04 	| `https://raw.githubusercontent.com/jobobby04/ShosetsuExtensions/master/` 	| ArchiveOfOurOwn, ReadWN 	|
 
 
 ## Add & Remove Repositories
